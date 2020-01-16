@@ -69,10 +69,10 @@
     @Html.ActionLink("Back to List", "Index")
 </p>
 <script>
-    var pusher = new Pusher('ec75c89294f1617ae16e', {
+    var pusher = new Pusher('e19424c57e2df62ff676', {
         cluster: 'mt1'
     });
-    var my_channel = pusher.subscribe('asp_channel');
+    var my_channel = pusher.subscribe('my_channel');
     var app = new Vue({
         el: '#app',
         data: {
