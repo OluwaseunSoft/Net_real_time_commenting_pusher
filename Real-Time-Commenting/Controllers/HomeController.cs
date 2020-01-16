@@ -47,9 +47,9 @@ namespace Real_Time_Commenting.Controllers
             db.Comment.Add(data);
             db.SaveChanges();
             var options = new PusherOptions();
-            options.Cluster = "XXX_APP_CLUSTER";
-            var pusher = new Pusher("XXX_APP_ID", "XXX_APP_KEY", "XXX_APP_SECRET", options);
-            ITriggerResult result = await pusher.TriggerAsync("asp_channel", "asp_event", data);
+            options.Cluster = "mt1";
+            var pusher = new Pusher("932166", "e19424c57e2df62ff676", "3ebdf5f715c1973b537a", options);
+            ITriggerResult result = await pusher.TriggerAsync("my_channel", "my_event", data);
             return Content("ok");
         }
     }
